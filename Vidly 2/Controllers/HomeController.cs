@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Vidly_2.Models;
 
 namespace Vidly_2.Controllers
 {
@@ -26,5 +27,13 @@ namespace Vidly_2.Controllers
 
             return View();
         }
+
+        [Route("Movies")]
+        public ActionResult MoviesList()
+        {
+            var movie = new Movie();
+            return View(movie);
+        }
+
     }
 }
